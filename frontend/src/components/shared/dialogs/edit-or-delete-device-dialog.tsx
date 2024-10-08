@@ -13,7 +13,7 @@ import {
 } from "../../ui/dialog";
 import Image from "next/image";
 import EditDeviceDialog from "./edit-device-dialog";
-import { deleteDevice } from "@/../../energy-bloom-soa/backend/src/services/devices/devices.actions";
+import { deleteDevice } from "../../../../../backend/src/services/devices/devices.actions";
 import { Device } from "../../../types/device";
 
 interface EditOrDeleteDeviceDialogProps {

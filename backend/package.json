@@ -8,7 +8,8 @@
     "start:users": "ts-node src/services/users/server.ts",
     "start:devices": "ts-node src/services/devices/server.ts",
     "start:electricity-usages": "ts-node src/services/electricity-usages/server.ts",
-    "start:all": "concurrently \"yarn run start:billings\" \"yarn run start:users\" \"yarn run start:devices\" \"yarn run start:electricity-usages\""
+    "start:all": "concurrently \"yarn run start:billings\" \"yarn run start:users\" \"yarn run start:devices\" \"yarn run start:electricity-usages\"",
+    "build": "echo 'No build step for the backend'"
   },
   "keywords": [],
   "author": "",

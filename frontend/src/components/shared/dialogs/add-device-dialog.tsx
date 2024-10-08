@@ -12,7 +12,7 @@ import {
   DialogDescription,
   DialogClose,
 } from "../../ui/dialog";
-import { addDevice } from "@/../../energy-bloom-soa/backend/src/services/devices/devices.actions";
+import { addDevice } from "../../../../../backend/src/services/devices/devices.actions";
 
 interface AddDeviceDialogProps {
   userId: string;

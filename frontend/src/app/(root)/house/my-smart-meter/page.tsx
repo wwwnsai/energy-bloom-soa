@@ -2,27 +2,27 @@ import ColorIndicator from "@/components/shared/box/color-indicator";
 import HeaderBox from "@/components/shared/box/header-box";
 import DoughnutChart from "@/components/shared/charts/doughnut-chart";
 import { MAX_MONTHY_USAGE } from "@/constants";
-import { calculateUsageAndPrice } from "@/../../energy-bloom-soa/backend/src/services/electricity-usages/electricity-usage.actions";
-import { getLoggedInUser } from "@/../../energy-bloom-soa/backend/src/services/users/users.actions";
+import { calculateUsageAndPrice } from "../../../../../../backend/src/services/electricity-usages/electricity-usage.actions";
+import { getLoggedInUser } from "../../../../../../backend/src/services/users/users.actions";
 import { cn } from "@/utils/cn";
 import dayjs from "dayjs";
 
 const MySmartMeterPage = async () => {
   const currentDateTime = dayjs().format("MMMM D, YYYY h:mm A");
 
-  const user = await getLoggedInUser();
+  // const user = await getLoggedInUser();
   let totalUsage = 0;
   let totalPrice = 0;
 
   const remainingUsage = MAX_MONTHY_USAGE - totalUsage;
 
-  if (user) {
+  // if (user) {
 
-    const { usage, price } = await calculateUsageAndPrice({user_id:  user.id });
-    totalUsage = usage;
-    totalPrice = price;
-    console.log("------------Total usage:", totalUsage);
-  }
+  //   const { usage, price } = await calculateUsageAndPrice({user_id:  user.id });
+  //   totalUsage = usage;
+  //   totalPrice = price;
+  //   console.log("------------Total usage:", totalUsage);
+  // }
 
   return (
     <section className="no-scrollbar flex w-full flex-row max-xl:max-h-screen max-xl:overflow-y-scroll ">

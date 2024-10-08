@@ -1,7 +1,7 @@
 import HeaderBox from "@/components/shared/box/header-box";
 import { HoverEffectBilling } from "@/components/shared/cards/card-billing";
-import { getBillings } from "@/../../energy-bloom-soa/backend/src/services/billings/billings.action";
-import { getLoggedInUser, getUserInfo } from "@/../../energy-bloom-soa/backend/src/services/users/users.actions";
+import { getLoggedInUser, getUserInfo } from "../../../../../../backend/src/services/users/users.actions";
+import { getBillings } from "../../../../../../backend/src/services/billings/billings.actions";
 
 const getCurrentMonthYear = () => {
   const now = new Date();
@@ -12,14 +12,14 @@ const getCurrentMonthYear = () => {
 
 // Define the Billing page as an asynchronous React functional component
 const BillingPage: React.FC = async () => {
-  const user = await getLoggedInUser();
+  // const user = await getLoggedInUser();
   let loggedIn = null;
   let billings: Billing[] = [];
 
-  if (user) {
-    loggedIn = await getUserInfo({ user_id: user.id });
-    billings = await getBillings({ user_id: user.id });
-  }
+  // if (user) {
+  //   loggedIn = await getUserInfo({ user_id: user.id });
+  //   billings = await getBillings({ user_id: user.id });
+  // }
 
   const formatedBillings = billings.map((bill) => {
     const monthFormatted = new Date(bill.created_at).toLocaleString('en-US', { month: 'long' });

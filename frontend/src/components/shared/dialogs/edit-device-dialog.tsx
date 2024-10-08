@@ -14,7 +14,7 @@ import {
   DialogDescription,
   DialogClose,
 } from "../../ui/dialog";
-import { updateDevice } from "@/../../energy-bloom-soa/backend/src/services/devices/devices.actions";
+import { updateDevice } from "../../../../../backend/src/services/devices/devices.actions";
 import { Device } from "../../../types/device";
 
 interface EditDeviceDialogProps {

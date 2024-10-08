@@ -6,7 +6,10 @@
   "scripts": {
     "start:frontend": "cd frontend && yarn run start",
     "start:backend": "cd backend && yarn run start:all",
-    "start:all": "concurrently \"yarn run start:frontend\" \"yarn run start:backend\""
+    "start:all": "concurrently \"yarn run start:frontend\" \"yarn run start:backend\"",
+    "build:frontend": "cd frontend && yarn run build",
+    "build:backend": "cd backend && yarn run build",
+    "build": "concurrently \"yarn run build:frontend\" \"yarn run build:backend\""
   },
   "keywords": [],
   "author": "",
