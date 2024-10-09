@@ -61,4 +61,3 @@ spec:
         - name: docker-socket  # Add Docker socket volume
           hostPath:
             path: /var/run/docker.sock
-#test
