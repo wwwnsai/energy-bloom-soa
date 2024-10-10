@@ -3,7 +3,7 @@
 import { createClient } from "../../utils/supabase/server.js";
 import dayjs from "dayjs";
 import { revalidatePath } from "next/cache.js";
-import { getMonthlyUsage } from './../electricity-usages/electricity-usage.actions.js';
+import { getMonthlyUsage } from '../electricity-usages/electricity-usage.actions.js';
 import { TAX } from '../../constants/index.js';
 import { handleSupabaseRequest } from '../../utils/supabase/supabase-request-handler.js';
 import { AddBillingParams, GetBillingParams } from "../../types/billing.js";

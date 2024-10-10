@@ -2,7 +2,7 @@
 
 import { createClient } from "../../utils/supabase/server.js";
 import dayjs from 'dayjs';
-import bcrypt from 'bcrypt';
+// import bcrypt from 'bcrypt';
 import { revalidatePath } from "next/cache.js";
 import { hash } from 'crypto';
 import { AddDeviceParams, DeleteDeviceParams, GetDevicesParams, UpdateDeviceParams } from "../../types/device.js";
@@ -20,15 +20,15 @@ export const addDevice = async ({
     const createdAt = dayjs().toISOString();
 
     // Hash the device name using bcrypt
-    const saltRounds = 10;
-    const hashedDeviceName = await bcrypt.hash(device_name, saltRounds);
+    // const saltRounds = 10;
+    // const hashedDeviceName = await bcrypt.hash(device_name, saltRounds);
 
-    console.log("Hashed Device Name:", hashedDeviceName);
-    console.log("Device Verification:", await bcrypt.compare(device_name, hashedDeviceName));
+    // console.log("Hashed Device Name:", hashedDeviceName);
+    // console.log("Device Verification:", await bcrypt.compare(device_name, hashedDeviceName));
     // console.log("Device Verification:", await bcrypt.compare("worng keys", hashedDeviceName));
 
     console.log("Adding device this is from actions:", {
-      hash: hashedDeviceName,
+      hash: device_name,
       user_id,
       device_name,
       device_type,
@@ -72,14 +72,14 @@ export const updateDevice = async ({
     const supabase = createClient();
 
     // Hash the device name using bcrypt
-    const saltRounds = 10;
-    const hashedDeviceName = await bcrypt.hash(device_name, saltRounds);
+    // const saltRounds = 10;
+    // const hashedDeviceName = await bcrypt.hash(device_name, saltRounds);
 
-    console.log("Hashed Device Name:", hashedDeviceName);
+    // console.log("Hashed Device Name:", hashedDeviceName);
 
     console.log('Updating device this is from actions:', {
       id,
-      device_name: hashedDeviceName, 
+      device_name: device_name,
       device_type,
       device_count,
       device_unit_usage,

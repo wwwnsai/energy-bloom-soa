@@ -1,10 +1,9 @@
 "use client"; 
 
 import { useEffect, useState } from 'react';
-import HeaderBox from "../../components/shared/box/header-box";
-import { HoverEffect } from "../../components/shared/cards/card-hover-effect";
-import RightSidebar from "../../components/navigations/right-sidebar";
 import { User } from "../../types/user";
+import { HoverEffect } from '@/components/shared/cards/card-hover-effect';
+import HeaderBox from '@/components/shared/box/header-box';
 
 const HomePage = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -62,7 +61,7 @@ const HomePage = () => {
           />
         </header>
         {error ? <p className="text-red-500">{error}</p> : <div><p>hello</p></div>}
-        {/* <HoverEffect items={devices} /> */}
+        <HoverEffect items={devices} />
       </div>
       {/* <RightSidebar user={user} devices={devices} /> */}
     </section>

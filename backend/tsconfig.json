@@ -23,7 +23,7 @@
     ],
     "strictNullChecks": true
   },
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/types/**/*.d.ts"],
+  "include": ["next-env.d.ts", "src/**/*.ts", "src/types/**/*.d.ts", "src/utils/supabase/server.js", "src/constants/index.js", "src/services/electricity-usages/electricity-usage.actions.js", "src/utils/supabase/supabase-request-handler.js"],
   "typeRoots": ["node_modules/@types", "src/types"],
   "exclude": ["node_modules"]
 }

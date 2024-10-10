@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/(root)/house/my-smart-meter/page": "app/(root)/house/my-smart-meter/page.js",
+  "/(root)/house/selection/page": "app/(root)/house/selection/page.js",
+  "/(root)/house/billing/page": "app/(root)/house/billing/page.js",
+  "/(root)/page": "app/(root)/page.js",
+  "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js",
+  "/(auth)/sign-up/page": "app/(auth)/sign-up/page.js"
+}

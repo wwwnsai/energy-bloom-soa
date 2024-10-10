@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:frontend": "cd frontend && yarn run start",
+    "start:frontend": "cd frontend && yarn run build && yarn run start", 
     "start:backend": "cd backend && yarn run start:all",
     "start:all": "concurrently \"yarn run start:frontend\" \"yarn run start:backend\"",
     "build:frontend": "cd frontend && yarn run build",
