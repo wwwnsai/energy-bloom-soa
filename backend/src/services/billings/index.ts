@@ -2,8 +2,8 @@
 "use server";
 
 import { Router } from 'express';
-import supabase from '../../db/supabaseClient';
-import { addBilling, getBillings } from './billings.actions';
+import supabase from '../../db/supabaseClient.js';
+import { addBilling, getBillings } from './billings.actions.js';
 // import dayjs from "dayjs";
 // import { revalidatePath } from "next/cache";
 // import { getMonthlyUsage } from './electricity-usage.actions';

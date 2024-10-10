@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { addDevice, updateDevice, deleteDevice, getDevices} from './devices.actions';
+import { addDevice, updateDevice, deleteDevice, getDevices} from './devices.actions.js';
 
 export const deviceRoutes = Router();
 

@@ -1,7 +1,7 @@
 "use server";
 
-import { createClient } from "../../utils/supabase/server";
-import { GetLoggedInUserResponse, GetUserInfoProps, SignInProps, SignUpParams, User } from '../../types/user';
+import { createClient } from "../../utils/supabase/server.js";
+import { GetLoggedInUserResponse, GetUserInfoProps, SignInProps, SignUpParams, User } from '../../types/user.js';
 
 export const getLoggedInUser = async () => {
   try {

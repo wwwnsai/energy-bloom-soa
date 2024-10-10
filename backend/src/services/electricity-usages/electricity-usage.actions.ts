@@ -1,12 +1,12 @@
 "use server";
 
-import { UNIT_PRICE } from '../../constants/index';
+import { UNIT_PRICE } from '../../constants/index.js';
 // import { hashData, verifyData } from '@/src/utils/crypto';
-import { createClient } from "../../utils/supabase/server";
-import { handleSupabaseRequest } from '../../utils/supabase/supabase-request-handler';
+import { createClient } from "../../utils/supabase/server.js";
+import { handleSupabaseRequest } from '../../utils/supabase/supabase-request-handler.js';
 import dayjs from 'dayjs';
-import { revalidatePath } from 'next/cache';
-import { GetMonthlyUsageParams, AddElectricityUsageParams, UpdateElectricityUsageParams, GetTodayUsageParams } from '../../types/electricity-usage';
+import { GetMonthlyUsageParams, AddElectricityUsageParams, UpdateElectricityUsageParams, GetTodayUsageParams } from '../../types/electricity-usage.js';
+import { revalidatePath } from 'next/cache.js';
 
 export const getMonthlyUsage = async ({ user_id }: GetMonthlyUsageParams) => {
   return handleSupabaseRequest(async () => {

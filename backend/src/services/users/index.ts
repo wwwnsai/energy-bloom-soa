@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { getLoggedInUser, getUserInfo, logoutAccount, signIn, signUp } from './users.actions';
+import { getLoggedInUser, getUserInfo, logoutAccount, signIn, signUp } from './users.actions.js';
 // import { cookies } from 'next/headers';
-import { createClient } from "../../utils/supabase/server";
+import { createClient } from "../../utils/supabase/server.js";
 
 export const userRoutes = Router();
 

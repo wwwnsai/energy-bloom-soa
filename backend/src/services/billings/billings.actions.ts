@@ -1,12 +1,12 @@
 "use server";
 
-import { createClient } from "../../utils/supabase/server";
+import { createClient } from "../../utils/supabase/server.js";
 import dayjs from "dayjs";
-import { revalidatePath } from "next/cache";
-import { getMonthlyUsage } from './../electricity-usages/electricity-usage.actions';
-import { TAX } from '../../constants/index';
-import { handleSupabaseRequest } from '../../utils/supabase/supabase-request-handler';
-import { AddBillingParams, GetBillingParams } from "../../types/billing";
+import { revalidatePath } from "next/cache.js";
+import { getMonthlyUsage } from './../electricity-usages/electricity-usage.actions.js';
+import { TAX } from '../../constants/index.js';
+import { handleSupabaseRequest } from '../../utils/supabase/supabase-request-handler.js';
+import { AddBillingParams, GetBillingParams } from "../../types/billing.js";
 
 export const addBilling = async ({
   user_id,

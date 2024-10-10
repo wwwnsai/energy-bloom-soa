@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
-import { userRoutes } from "./index"; 
+import { userRoutes } from "./index.js"; 
 
 const app = express();
 const PORT = process.env.USERS_PORT || 3002;

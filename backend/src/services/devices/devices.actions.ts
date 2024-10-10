@@ -1,11 +1,11 @@
 "use server";
 
-import { createClient } from "../../utils/supabase/server";
+import { createClient } from "../../utils/supabase/server.js";
 import dayjs from 'dayjs';
 import bcrypt from 'bcrypt';
-import { revalidatePath } from 'next/cache';
+import { revalidatePath } from "next/cache.js";
 import { hash } from 'crypto';
-import { AddDeviceParams, DeleteDeviceParams, GetDevicesParams, UpdateDeviceParams } from "../../types/device";
+import { AddDeviceParams, DeleteDeviceParams, GetDevicesParams, UpdateDeviceParams } from "../../types/device.js";
 
 export const addDevice = async ({
   user_id,
