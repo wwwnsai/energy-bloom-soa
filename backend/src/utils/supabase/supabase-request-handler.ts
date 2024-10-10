@@ -28,7 +28,7 @@ export const handleSupabaseRequest = async (
       factor: 2,
       minTimeout: 1000,
       maxTimeout: 5000,
-      onFailedAttempt: (error) => {
+      onFailedAttempt: (error: any) => {
         console.warn(
           `Attempt ${error.attemptNumber} failed. There are ${error.retriesLeft} retries left.`
         );

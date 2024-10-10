@@ -6,6 +6,7 @@ import { createClient } from "../../utils/supabase/server";
 import { handleSupabaseRequest } from '../../utils/supabase/supabase-request-handler';
 import dayjs from 'dayjs';
 import { revalidatePath } from 'next/cache';
+import { GetMonthlyUsageParams, AddElectricityUsageParams, UpdateElectricityUsageParams, GetTodayUsageParams } from '../../types/electricity-usage';
 
 export const getMonthlyUsage = async ({ user_id }: GetMonthlyUsageParams) => {
   return handleSupabaseRequest(async () => {

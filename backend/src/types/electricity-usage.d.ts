@@ -1,4 +1,4 @@
-declare type ElectricityUsage = {
+export type ElectricityUsage = {
     id: string;
     user_id: string;
     month: number;
@@ -9,27 +9,27 @@ declare type ElectricityUsage = {
     updated_at: string;
 };
 
-declare interface GetTodayUsageParams {
+export interface GetTodayUsageParams {
     user_id: string;
 }
 
-declare interface GetMonthlyUsageParams {
+export interface GetMonthlyUsageParams {
     user_id: string;
 }
 
-declare interface AddElectricityUsageParams {
-    user_id: string;
-    usage: number;
-    price: number;
-}
-
-declare interface UpdateElectricityUsageParams {
+export interface AddElectricityUsageParams {
     user_id: string;
     usage: number;
     price: number;
 }
 
-declare interface AddorUpdateElectricityUsageParams {
+export interface UpdateElectricityUsageParams {
+    user_id: string;
+    usage: number;
+    price: number;
+}
+
+export interface AddorUpdateElectricityUsageParams {
     user_id: string;
     usage: number;
     price: number;

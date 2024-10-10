@@ -1,4 +1,4 @@
-declare type Billing = {
+export type Billing = {
     id: string;
     user_id: string;
     month: number;
@@ -10,12 +10,12 @@ declare type Billing = {
     created_at: string;
 }
 
-declare interface AddBillingParams {
+export interface AddBillingParams {
     user_id: string;
     month: number;
     year: number;
 }
 
-declare interface GetBillingParams {
+export interface GetBillingParams {
     user_id: string;
 }

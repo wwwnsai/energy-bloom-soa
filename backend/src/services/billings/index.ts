@@ -3,7 +3,7 @@
 
 import { Router } from 'express';
 import supabase from '../../db/supabaseClient';
-import { addBilling, getBillings } from './billings.action';
+import { addBilling, getBillings } from './billings.actions';
 // import dayjs from "dayjs";
 // import { revalidatePath } from "next/cache";
 // import { getMonthlyUsage } from './electricity-usage.actions';
